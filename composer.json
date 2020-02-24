@@ -1,0 +1,42 @@
+{
+  "repositories": [
+    {
+      "type":"composer",
+      "url":"https://wpackagist.org"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "wordpress/wordpress",
+        "type": "webroot",
+        "version": "5.3.2",
+        "dist": {
+          "type": "zip",
+          "url": "https://github.com/WordPress/WordPress/archive/5.3.2.zip"
+        },
+        "require": {
+          "fancyguy/webroot-installer": "^1.0"
+        }
+      }
+    }
+  ],
+  "require": {
+    "wordpress/wordpress": "5.3.2",
+    "wpackagist-plugin/wordpress-seo":"12.9.1",
+    "wpackagist-plugin/advanced-custom-fields":"5.8.7",
+    "wpackagist-plugin/acf-content-analysis-for-yoast-seo":"2.3.0",
+    "wpackagist-plugin/webp-express":"0.17.2",
+    "wpackagist-plugin/custom-post-type-ui":"1.7.2",
+    "wpackagist-plugin/navz-photo-gallery":"1.6.5",
+    "wpackagist-plugin/taxonomy-terms-order":"1.5.7.1",
+    "wpackagist-plugin/heartbeat-control":"2.0",
+    "wpackagist-plugin/post-types-order":"1.9.4.2"
+  },
+  "extra": {
+    "webroot-dir": "core",
+    "webroot-package": "wordpress/wordpress",
+    "installer-paths": {
+      "content/plugins/{$name}/": ["type:wordpress-plugin"]
+    }
+  }
+}
