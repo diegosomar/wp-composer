@@ -66,3 +66,6 @@ tags
 
 # ignore composer.lock file
 composer.lock
+
+# ignore wp-config.php file
+wp-config.php
