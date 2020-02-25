@@ -45,12 +45,11 @@
   "scripts": {
     "post-install-cmd": [
       "mkdir -p content/languages/",
-      "cp -R core/wp-content/languages/* content/languages/",
+      "if [ -d 'core/wp-content/languages' ]; then cp -R core/wp-content/languages/* content/languages/;fi",
       "mkdir -p content/uploads/"
     ],
     "post-update-cmd": [
-      "mkdir -p content/languages/",
-      "cp -R core/wp-content/languages/* content/languages/"
+      "if [ -d 'core/wp-content/languages' ]; then cp -R core/wp-content/languages/* content/languages/;fi"
     ]
   }
 }
