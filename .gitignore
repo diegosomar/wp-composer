@@ -1,7 +1,7 @@
 vendor
 core
+content/languages
 content/plugins
-content/languages/plugins
 content/uploads
 content/webp-express
 content/upgrade

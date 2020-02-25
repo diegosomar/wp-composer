@@ -34,3 +34,15 @@ if (WP_DEBUG) {
 }
 
 define('SITE_ENV', 'development');
+
+// ========================
+// Custom Content Directory
+// ========================
+$protocol = stripos($_SERVER['SERVER_PROTOCOL'],'https') === 0 ? 'https://' : 'http://';
+define( 'WP_CONTENT_DIR', dirname( __FILE__ ) . '/content' );
+define( 'WP_CONTENT_URL', $protocol . $_SERVER['HTTP_HOST'] . '/site/content' );
+
+define('WPMU_PLUGIN_DIR', dirname( __FILE__ ) . '/content/mu-plugins');
+define('WPMU_PLUGIN_URL', $protocol . $_SERVER['HTTP_HOST'] . '/site/content/mu-plugins');
+
+define('ABSPATH', dirname(__FILE__) . '/core/');
